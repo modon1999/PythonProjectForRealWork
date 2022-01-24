@@ -21,7 +21,7 @@ def push_zapis(seans_user_id, video_type_id, video_com_type_id, video_place_id, 
     """
     Функция внесения записи в *****
     """
-    url_login = '*****'
+    url_login = 'http://*****'
     session = requests.session()
     session.post(url_login, {  # Аутентификация в *****
         'data[User][username]': '*****',
@@ -30,7 +30,7 @@ def push_zapis(seans_user_id, video_type_id, video_com_type_id, video_place_id, 
     })
 
     str_comment = comment.encode('cp1251')
-    a = session.post('*****', {  # Пример внесения записи(рабочий)
+    session.post('http://*****', {  # Пример внесения записи(рабочий)
         'data[Video][seans_user_id]': seans_user_id,
         'data[Video][video_type_id]': video_type_id,
         'data[Video][video_com_type_id]': video_com_type_id,
